@@ -17,6 +17,7 @@ cve_data = json.load(GzipFile(fileobj=BytesIO(response.content)))
 for cve_item in cve_data['CVE_Items']:
     cve_timestamp = cve_item['publishedDate']
     cve_id = cve_item['cve']['CVE_data_meta']['ID']
+    # To state the comprehension another way....
     # for desc_data in cve_item['cve']['description']['description_data']:
     #     if desc_data['lang'] == 'en':
     #         cve_description = desc_data['value']
